@@ -22,7 +22,7 @@ echo "Sync success"
 echo "============="
 
 # Export
-#export BUILD_USERNAME=FARHAN
+#export BUILD_USERNAME=un
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export SELINUX_IGNORE_NEVERALLOWS=true
