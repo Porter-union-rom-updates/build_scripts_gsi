@@ -29,14 +29,12 @@ export SELINUX_IGNORE_NEVERALLOWS=true
 echo "======= Export Done ======"
 
 # Set up build environment
+./patches/apply-all.sh .
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-. build/envsetup.sh
+source build/envsetup.sh
 ccache -M 50G -F 0
-lunch treble_arm64_bgN-userdebug 
+lunch infinity__arm64_bgN-ap4a-userdebug 
 make systemimage -j$(nproc --all)
-# son
-cd out/target/product/tdgsi_arm64_ab
-xz -z -k system.img 
