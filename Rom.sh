@@ -4,13 +4,13 @@ rm -rf .repo/local_manifests/
 rm -rf .repo/local_manifests/gapps.xml/
 
 # repo init rom
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b Infinity/14
+git clone https://github.com/mytja/treble_manifest.git -b inf .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
