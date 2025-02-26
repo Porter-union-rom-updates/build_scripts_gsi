@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests/
+rm -rf .repo/local_manifests/gapps.xml/
 
 # repo init rom
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
@@ -9,7 +10,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests_clo -b infinity .repo/local_manifests
+git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b Infinity/14
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -19,9 +20,6 @@ echo "============================"
 echo "============="
 echo "Sync success"
 echo "============="
-
-# remove face unlock 
-rm -rf packages/apps/FaceUnlock
 
 # Export
 export BUILD_USERNAME=FARHAN
@@ -40,5 +38,5 @@ ccache -M 50G -F 0
 lunch treble_arm64_bgN-userdebug 
 make systemimage -j$(nproc --all)
 # son
- cd out/target/product/tdgsi_arm64_ab
- xz -z -k system.img 
+cd out/target/product/tdgsi_arm64_ab
+xz -z -k system.img 
