@@ -32,7 +32,7 @@ echo "======= Export Done ======"
 ./patches/apply-all.sh .
 cd evo/treble_app
 ./build.sh release
-cd../..
+cd ../..
 echo "====== patch Done ======="
 
 # Lunch
