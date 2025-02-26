@@ -30,11 +30,15 @@ echo "======= Export Done ======"
 
 # Set up build environment
 ./patches/apply-all.sh .
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
+cd evo/treble_app
+./build.sh release
+cd../..
+echo "====== patch Done ======="
 
 # Lunch
 source build/envsetup.sh
 ccache -M 50G -F 0
 lunch infinity__arm64_bgN-ap4a-userdebug 
 make systemimage -j$(nproc --all)
+cd out/target/product/tdgsi_arm64_ab
+xz -9 -T0 -v -z system.img 
