@@ -14,7 +14,7 @@ echo "=================="
 #repo init -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs
 
 # Local manifests
-git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b Infinity/14
+git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b 15-los
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
