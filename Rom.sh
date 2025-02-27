@@ -29,7 +29,12 @@ export SELINUX_IGNORE_NEVERALLOWS=true
 echo "======= Export Done ======"
 
 # Set up build environment
+cd device/phh/treble
+bash generate.sh ~/evo/device/mytja/evo/evo.mk
+cd ../../..
+# patch 
 ./patches/apply-all.sh .
+# treble app
 cd treble_app
 ./build.sh release
 cd ..
