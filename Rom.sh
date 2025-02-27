@@ -27,15 +27,18 @@ export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export SELINUX_IGNORE_NEVERALLOWS=true
 echo "======= Export Done ======"
+# clone 
+git clone https://github.com/Porter-union-rom-updates/LineageOS_Ext_gsi -b 15
 
-# Set up build environment
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
 # patch 
 bash patches/apply-patches.sh .
 cd device/phh/treble
 bash generate.sh lineage
 cd ../../..
+
+# Set up build environment
+source build/envsetup.sh
+
 # Lunch
 . build/envsetup.sh
 ccache -M 50G -F 0
