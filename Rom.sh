@@ -4,13 +4,13 @@ rm -rf .repo/local_manifests/
 rm -rf .repo/local_manifests/gapps.xml/
 
 # repo init rom
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/MisterZtr/android.git -b lineage-22.1 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b Infinity/14
+git clone https://github.com/Porter-union-rom-updates/treble_manifest.git .repo/local_manifests  -b 15-los
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -35,7 +35,7 @@ echo "====== Envsetup Done ======="
 # Lunch
 . build/envsetup.sh
 ccache -M 50G -F 0
-lunch treble_arm64_bgN-userdebug 
+lunch treble_arm64_bvN-ap4a-userdebug
 make systemimage -j$(nproc --all)
 # son
 cd out/target/product/tdgsi_arm64_ab
