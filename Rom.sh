@@ -30,9 +30,9 @@ echo "======= Export Done ======"
 
 # Set up build environment
 ./patches/apply-all.sh .
-cd evo/treble_app
+cd treble_app
 ./build.sh release
-cd ../..
+cd ..
 echo "====== patch Done ======="
 
 # Lunch
