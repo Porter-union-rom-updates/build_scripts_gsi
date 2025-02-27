@@ -30,7 +30,7 @@ echo "======= Export Done ======"
 
 # Set up build environment
 cd device/phh/treble
-bash generate.sh ~/evo/device/mytja/evo/evo.mk
+bash generate.sh device/mytja/evo/evo.mk
 cd ../../..
 # patch 
 ./patches/apply-all.sh .
