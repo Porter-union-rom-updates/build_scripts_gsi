@@ -4,7 +4,7 @@ rm -rf .repo/local_manifests/
 rm -rf .repo/local_manifests/gapps.xml/
 
 # repo init rom
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/MisterZtr/android.git -b lineage-22.1 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
