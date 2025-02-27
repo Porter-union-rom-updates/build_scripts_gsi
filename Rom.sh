@@ -9,6 +9,10 @@ echo "=================="
 echo "Repo init success"
 echo "=================="
 
+# ext edition 
+#repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs -g default,-mips,-darwin,-notdefault
+#repo init -u https://github.com/Los-Ext/manifest.git -b 15 --git-lfs
+
 # Local manifests
 git clone https://github.com/Porter-union-rom-updates/treble_manifest .repo/local_manifests  -b Infinity/14
 echo "============================"
